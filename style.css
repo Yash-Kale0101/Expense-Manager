@@ -116,3 +116,11 @@ button:hover {
 .summary-item:last-child {
     border-bottom: none;
 }
+
+#expense-list button {
+    background: #e74c3c;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
