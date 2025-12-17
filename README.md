@@ -58,13 +58,11 @@ Project Structure
 
 ├── index.html  
 ├── style.css  
-├── app.js        # main application logic  
-├── data.js       # expense data handling & LocalStorage  
-├── ui.js         # DOM updates  
-├── chart.js      # chart rendering  
+├── app.js        
+├── data.js     
+├── ui.js       
+├── chart.js      
 ├── README.md
-
-
 ---
 
 Author
