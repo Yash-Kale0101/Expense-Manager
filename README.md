@@ -56,7 +56,7 @@ Improve frontend development skills
 
 Project Structure
 
-expense-tracker/
+Expense-Manager/
 ├── index.html
 ├── style.css
 ├── script.js
