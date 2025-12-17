@@ -30,7 +30,7 @@ The project focuses on practicing core JavaScript logic, data handling, and buil
 This project was built to strengthen JavaScript fundamentals, practice logic building, and understand how client-side applications manage and persist data.
 
 ## Live Demo
-(Your GitHub Pages link)
+https://share.google/qdcJX0IHjQBgyPud0
 
 ## Author
 Yash Govind Kale  
