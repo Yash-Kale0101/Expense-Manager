@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateTotalDisplay(currentData);
     updateCategoryList(currentData);
     renderCharts(currentData);
+    renderExpenseList(currentData);
 
     let form = document.getElementById('expense-form');
     
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateTotalDisplay(newData);
         updateCategoryList(newData);
         renderCharts(newData);
+        renderExpenseList(newData);
         
         alert("Expense Added!");
     });
@@ -58,5 +60,24 @@ document.addEventListener('DOMContentLoaded', function() {
         updateTotalDisplay(filtered);
         updateCategoryList(filtered);
         renderCharts(filtered);
+        renderExpenseList(filtered);
     });
+    document.getElementById('expense-list').addEventListener('click', function(e) {
+    if (e.target.tagName === 'BUTTON') {
+        let id = e.target.getAttribute('data-id');
+        id = parseInt(id);
+
+        deleteExpenseById(id);
+
+        let month = document.getElementById('filter-month').value;
+        let year = document.getElementById('filter-year').value;
+
+        let updatedData = getFilteredData(month, year);
+
+        updateTotalDisplay(updatedData);
+        updateCategoryList(updatedData);
+        renderCharts(updatedData);
+        renderExpenseList(updatedData);
+    }
+});
 });
