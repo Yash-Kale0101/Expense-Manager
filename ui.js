@@ -33,3 +33,30 @@ function updateCategoryList(expensesList) {
         listDiv.appendChild(div);
     }
 }
+
+
+function renderExpenseList(expensesList) {
+    let box = document.getElementById('expense-list');
+    box.innerHTML = '';
+
+    if (expensesList.length === 0) {
+        box.innerHTML = '<p>No expenses added.</p>';
+        return;
+    }
+
+    for (let i = 0; i < expensesList.length; i++) {
+        let item = expensesList[i];
+
+        let div = document.createElement('div');
+        div.className = 'summary-item';
+
+        let html = '';
+        html += '<span>';
+        html += item.desc + ' - ₹' + item.amount;
+        html += '</span>';
+        html += '<button data-id="' + item.id + '">Delete</button>';
+
+        div.innerHTML = html;
+        box.appendChild(div);
+    }
+}
