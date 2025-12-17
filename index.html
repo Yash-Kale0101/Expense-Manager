@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Expense Manager</h1>
+    </div>
+
+    <div class="container">
+        
+        <div class="top-section">
+            <div class="card form-card">
+                <h3>Add New Expense</h3>
+                <form id="expense-form">
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" id="desc" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <input type="number" id="amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="category">
+                            <option value="Food">Food</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Bills">Bills</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <button type="submit" id="add-btn">Add Expense</button>
+                </form>
+            </div>
+
+            <div class="card stats-card">
+                <h3>Total Spending</h3>
+                <h1 id="total-display">$0.00</h1>
+                
+                <div class="filters">
+                    <label>Filter By:</label>
+                    <select id="filter-month">
+                        <option value="all">All Months</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select id="filter-year">
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                    </select>
+                    <button id="filter-btn">Apply Filter</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="charts-section">
+            <div class="card chart-card">
+                <h3>Category Breakdown</h3>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="card chart-card">
+                <h3>Expenses by Category (Bar)</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+
+        <div class="list-section">
+            <div class="card">
+                <h3>Category Summary</h3>
+                <div id="category-list">
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
