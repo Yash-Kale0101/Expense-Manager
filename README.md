@@ -56,11 +56,13 @@ Improve frontend development skills
 
 Project Structure
 
-My-Expense/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+├── index.html  
+├── style.css  
+├── app.js        # main application logic  
+├── data.js       # expense data handling & LocalStorage  
+├── ui.js         # DOM updates  
+├── chart.js      # chart rendering  
+├── README.md
 
 
 ---
