@@ -49,3 +49,17 @@ function getFilteredData(month, year) {
 
     return result;
 }
+
+
+function deleteExpenseById(id) {
+    let newList = [];
+
+    for (let i = 0; i < allExpenses.length; i++) {
+        if (allExpenses[i].id !== id) {
+            newList.push(allExpenses[i]);
+        }
+    }
+
+    allExpenses = newList;
+    saveData();
+}
