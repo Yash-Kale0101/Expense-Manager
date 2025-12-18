@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
         renderExpenseList(filtered);
     });
     document.getElementById('expense-list').addEventListener('click', function(e) {
-    if (e.target.tagName === 'BUTTON') {
-        let id = e.target.getAttribute('data-id');
-        id = parseInt(id);
+
+    if (e.target.className === 'delete-btn') {
+        let id = parseInt(e.target.getAttribute('data-id'));
 
         deleteExpenseById(id);
 
@@ -80,5 +80,23 @@ document.addEventListener('DOMContentLoaded', function() {
         renderCharts(updatedData);
         renderExpenseList(updatedData);
     }
+
+    if (e.target.className === 'edit-btn') {
+        let id = parseInt(e.target.getAttribute('data-id'));
+        editingExpenseId = id;
+
+        for (let i = 0; i < allExpenses.length; i++) {
+            if (allExpenses[i].id === id) {
+                document.getElementById('desc').value = allExpenses[i].desc;
+                document.getElementById('amount').value = allExpenses[i].amount;
+                document.getElementById('category').value = allExpenses[i].category;
+                document.getElementById('date').value = allExpenses[i].date;
+                break;
+            }
+        }
+
+        document.getElementById('add-btn').innerText = 'Update Expense';
+    }
+
 });
 });
