@@ -1,6 +1,6 @@
 # Expense Manager
 
-A beginner-friendly expense management web application built using HTML, CSS, and JavaScript.  
+A beginner project expense management web application built using HTML, CSS, and JavaScript.  
 The project focuses on practicing core JavaScript logic, data handling, and building small applications end-to-end.
 
 ## Features
