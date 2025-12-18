@@ -7,6 +7,7 @@ function updateTotalDisplay(expensesList) {
     let display = document.getElementById('total-display');
     display.innerText = 'Rs. ' + total.toFixed(2);
 }
+let editingExpenseId = null;
 document.addEventListener('DOMContentLoaded', function() {
     loadData();
     
