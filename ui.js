@@ -54,7 +54,8 @@ function renderExpenseList(expensesList) {
         html += '<span>';
         html += item.desc + ' - ₹' + item.amount;
         html += '</span>';
-        html += '<button data-id="' + item.id + '">Delete</button>';
+        html += '<button class="edit-btn" data-id="' + item.id + '">Edit</button>';
+        html += '<button class="delete-btn" data-id="' + item.id + '">Delete</button>';
 
         div.innerHTML = html;
         box.appendChild(div);
