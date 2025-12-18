@@ -28,10 +28,25 @@ document.addEventListener('DOMContentLoaded', function() {
         let category = document.getElementById('category').value;
         let date = document.getElementById('date').value;
         
-        if(desc === "" || amount === "" || date === "") {
-            alert("Please fill all fields");
-            return;
-        }
+        if (desc.trim() === "") {
+    alert("Description cannot be empty");
+    return;
+}
+
+if (amount === "" || isNaN(amount) || Number(amount) <= 0) {
+    alert("Please enter a valid amount greater than 0");
+    return;
+}
+
+if (category === "") {
+    alert("Please select a category");
+    return;
+}
+
+if (date === "") {
+    alert("Please select a date");
+    return;
+}
 
         if (editingExpenseId === null) {
     addExpenseData(desc, amount, category, date);
