@@ -33,7 +33,22 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        addExpenseData(desc, amount, category, date);
+        if (editingExpenseId === null) {
+    addExpenseData(desc, amount, category, date);
+} else {
+    for (let i = 0; i < allExpenses.length; i++) {
+        if (allExpenses[i].id === editingExpenseId) {
+            allExpenses[i].desc = desc;
+            allExpenses[i].amount = parseFloat(amount);
+            allExpenses[i].category = category;
+            allExpenses[i].date = date;
+            break;
+        }
+    }
+    saveData();
+    editingExpenseId = null;
+    document.getElementById('add-btn').innerText = 'Add Expense';
+        }
         
         form.reset();
         
