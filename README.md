@@ -15,7 +15,6 @@ The project focuses on practicing core JavaScript logic, data handling, and buil
 - CSS
 - JavaScript
 - Chart.js
-- Browser LocalStorage
 
 ## Project Structure
 ├── index.html  
